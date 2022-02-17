@@ -1,0 +1,16 @@
+.container {
+	max-width: 962px;
+	margin: 30px auto 0;
+}
+
+.container > h1 {
+	text-align: center;
+}
+
+.ck-fontsize-option .ck-button__label {
+	font-size: 14px!important;
+}
+
+.ck-content .todo-list .todo-list__label > input {
+	margin-bottom: 6px!important;
+}
