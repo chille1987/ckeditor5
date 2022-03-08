@@ -45,8 +45,10 @@ import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 import SourceEditing from '@ckeditor/ckeditor5-source-editing/src/sourceediting';
 import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert';
 
+// Custom Plugins
+import Accordion from './plugins/accordion/accordion';
 
-export default class HelpjuiceEditor extends ClassicEditorBase {}
+export default class HelpjuiceEditor extends ClassicEditorBase { }
 
 // Plugins to include in the build.
 HelpjuiceEditor.builtinPlugins = [
@@ -87,34 +89,35 @@ HelpjuiceEditor.builtinPlugins = [
 	Highlight,
 	HtmlEmbed,
 	RemoveFormat,
-	SourceEditing
+	SourceEditing,
+	Accordion
 ];
 
 // Editor configuration.
 HelpjuiceEditor.defaultConfig = {
 	heading: {
 		options: [
-			{model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph'},
-			{model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1'},
-			{model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2'},
-			{model: 'heading3', view: 'h3', title: 'Heading 3', class: 'ck-heading_heading3'},
-			{model: 'heading4', view: 'h4', title: 'Heading 4', class: 'ck-heading_heading4'}
+			{ model: 'paragraph', title: 'Paragraph', class: 'ck-heading_paragraph' },
+			{ model: 'heading1', view: 'h1', title: 'Heading 1', class: 'ck-heading_heading1' },
+			{ model: 'heading2', view: 'h2', title: 'Heading 2', class: 'ck-heading_heading2' },
+			{ model: 'heading3', view: 'h3', title: 'Heading 3', class: 'ck-heading_heading3' },
+			{ model: 'heading4', view: 'h4', title: 'Heading 4', class: 'ck-heading_heading4' }
 		]
 	},
 	fontSize: {
 		options: [
-				12,
-				14,
-				16,
-				18,
-				20,
-				24,
-				30,
-				36,
-				48,
-				60,
-				72,
-				92
+			12,
+			14,
+			16,
+			18,
+			20,
+			24,
+			30,
+			36,
+			48,
+			60,
+			72,
+			92
 		]
 	},
 	ckfinder: {
@@ -141,7 +144,7 @@ HelpjuiceEditor.defaultConfig = {
 			'indent',
 			'|',
 			'link',
-			'ckfinder',
+			'imageInsert',
 			'mediaEmbed',
 			'|',
 			'alignment',
@@ -154,7 +157,8 @@ HelpjuiceEditor.defaultConfig = {
 			'sourceEditing',
 			'removeFormat',
 			'undo',
-			'redo'
+			'redo',
+			'accordion'
 		],
 		shouldNotGroupWhenFull: true
 	},
